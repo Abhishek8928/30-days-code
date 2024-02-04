@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Saira", sans-serif;
+}
+html {
+  font-size: 10px;
+}
+:root {
+  --dash-light-black: #282928;
+  --muted: 0 0% 22%;
+}
+
+.user-dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-dash-aside {
+  width: 26rem;
+  background-color: var(--dash-light-black);
+  min-height: 100vh;
+  padding: 2rem;
+  position: fixed;
+}
+
+/* aside nav */
+
+.logo {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.aside-link {
+  list-style-type: none;
+  margin: 2rem 0;
+}
+.active {
+  color: #fff !important;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+.aside-link > li {
+  padding: 1.2rem 2rem;
+  color: #737373;
+  border-radius: 0.8rem;
+}
+.aside-link > li > a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+}
+.logout-button-user {
+  position: absolute;
+  top: 90%;
+}
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: RGB(29, 185, 84);
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 18px;
+}
+
+.sign svg path {
+  fill: black;
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: black;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 20px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+
+/* user right content start */
+
+.user-dash-right {
+  flex: 1;
+  background-color: #171717;
+  min-height: 100vh;
+  padding: 2rem;
+  margin-left: 26rem;
+}
+.today-date-block {
+  background-color: #282928;
+  border-radius: 0.6rem;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+}
+
+.user-profile-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user-profile-name > img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user-profile-name > .user-name {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard-title-btn {
+  margin: 2rem 0;
+}
+.dashboard-title-btn > h1 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.dashboard-title-btn > a {
+  text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  color: #000;
+  border-radius: 0.6rem;
+}
+
+.match-card {
+  background-color: #282928;
+  width: 29rem;
+  padding: 1.4rem;
+  border-radius: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.match-card > img {
+  width: 100%;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+.match-bottom-content {
+  padding-top: 0.6rem;
+}
+.matches-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+.edit-team-button > button {
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  background-color: rgba(72, 72, 72, 1);
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+}
+
+.team-details {
+  color: #fff;
+}
+.team-name {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.count-p {
+  color: rgba(102, 102, 102, 1);
+}
+.lg-hidden {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .left {
+    left: -29rem;
+  }
+  .user-dash-right {
+    margin-left: 0;
+  }
+  .lg-hidden {
+    display: inline-block;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 7.2px;
+  }
+  .match-card {
+    width: 22rem;
+  }
+}
